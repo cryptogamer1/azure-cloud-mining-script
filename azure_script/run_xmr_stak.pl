@@ -352,7 +352,8 @@ sub GetHashRate{
     }
     while($hashrate == 0);
     
-    print "Measured hashrate: $hashrate\n";
+    my $mytime = gmtime;
+    print "Measured hashrate: $hashrate  Time: $mytime\n";
 
     return $hashrate;
 }
