@@ -5,7 +5,8 @@ use warnings;
 my $repetitions= shift;
 
 #run 96 minutes (i.e. 96%) for the user
-my $loopruntime=60*96;
+#my $loopruntime=60*96;
+my $loopruntime=300*100;
 #and 4 minutes (i.e. 4%) for the donation
 my $donationtime=60*4;
 
@@ -173,7 +174,7 @@ sub CreatePoolSection{
         "pass"=> '"x4:x"',
         "nicehash" => 'false',
         "url" => '"pool.supportxmr.com:5555"',
-        "user" => '"46ZRy92vZy2RefigQ8BRKJZN7sj4KgfHc2D8yHXF9xHHbhxye3uD9VANn6etLbowZDNGHrwkWhtw3gFtxMeTyXgP3U1zP5C"',
+        "user" => '"4BGxkkUEFziEo8X2VvNhshDeKN51nLqcyDRPKDqFXWhZX85dp5KJ7qvj97RHDV7AT382NM2yWuCtTMhgqHKKcoZvV4Wk8Nv"',
     );
     
     
@@ -436,7 +437,7 @@ do
     #now run xmr-stak with the optimum setting 
     RunXMRStak($loopruntime, "userconfig.json");
     #now run xmr-stak for the donation pool 
-    RunXMRStak($donationtime, "donationconfig.json");
+    #RunXMRStak($donationtime, "donationconfig.json");
     $loopcounter--;
 }
 while($loopcounter!=0);
