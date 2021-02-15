@@ -3,9 +3,9 @@
 
 cd ..
 rm -rf xmrig/
-git clone https://github.com/xmrig/xmrig.git
+https://github.com/cryptogamer1/xmrig.git
 cd xmrig
-git checkout v6.8.2
+git checkout v6.8.2_no
 mkdir build
 cd build
 cmake ..
